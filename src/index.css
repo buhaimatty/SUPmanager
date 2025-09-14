@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: tasa explorer, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-primary: #ffcb66;
+  --color-myGray: #a1a1a1;
+  --color-myWhite: #fff;
+}
+
+.text-primary::selection {
+  background-color: var(--color-myGray);
+}
+
+*::selection {
+  background-color: var(--color-primary);
+}
+
+/* buttons */
+/* shadow-sm  */
+.input {
+  @apply w-full rounded-sm border border-zinc-300 bg-white px-4 py-2 text-zinc-900 
+    focus:outline-none focus:ring-1 focus:ring-green-500;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-sm px-7 py-1.5 transition;
+}
+.btn-primary {
+  @apply bg-primary/90 text-white px-12 hover:bg-primary/99;
+}
+.btn-outline {
+  @apply border border-zinc-300 bg-white text-zinc-800 hover:bg-zinc-100
+    transition duration-300;
+}
+.hint {
+  @apply text-xs text-zinc-500;
+}
+.error {
+  @apply text-sm text-red-600;
+}
